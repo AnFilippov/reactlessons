@@ -23,7 +23,7 @@ handleSub () {
             <div>
                 <h2>{this.state.value}</h2>
                 <button onClick={this.handleAdd}>+</button>
-                <button onClick={this.handleSub}>+</button>
+                <button onClick={this.handleSub}>-</button>
             </div>
         );
     }
