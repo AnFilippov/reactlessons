@@ -1,0 +1,21 @@
+.form {
+    width: 500px;
+    border: 2px solid red;
+    margin: 0 auto;
+    background-color: beige;
+    p {
+        input {
+border-radius: 5px;
+
+        }
+        .button {
+            padding:10px 30px;
+            background-color: aquamarine;
+            font-size: large;
+            &:hover, :active {
+                background-color: green;
+                cursor: pointer;
+            }
+        }
+    }
+}
