@@ -1,0 +1,22 @@
+.listItem {
+  display: flex;
+  justify-content: space-between;
+ 
+  max-width: 200px;
+  margin-bottom: 10px;
+  border: 1px solid blue;
+  padding: 10px;
+  background-color: antiquewhite;
+
+  
+}
+
+.listBody {
+  list-style-type: none;
+ text-align: left;
+  width: 200px;
+  margin: 20px auto;
+  padding-left: 0;
+ 
+  
+}
