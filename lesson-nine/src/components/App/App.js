@@ -21,6 +21,10 @@ const About = () => {
   )
 }
 
+const Contacts = () => {
+  throw new Error("Error during render");
+};
+
 const Main = () => {
   return (
     <ul>
@@ -41,6 +45,7 @@ function App() {
           <Main />
           <Route path="/" exact component={Home} />
           <Route path="/about" exact component={About} />
+          <Route path="/contacts" exact component={Contacts} />
 
         </ErrorPage>
       </ErrorBoundary>
