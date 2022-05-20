@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import HomePage from "../HomePage/HomePage";
+import ModalAuth from "../ModalAuth/ModalAuth";
 
 const Header = () => {
+
+  const [isLoginModal, setIsLoginModal] = useState(false);
+
+  const toogleLoginModalOpen = () => {
+    setIsLoginModal(!isLoginModal)
+  }
+
   const logo = require("../../assets/img/icon/logo.svg").default
 
   return (
@@ -9,15 +19,15 @@ const Header = () => {
 
         <div className="store-header__wrapper">
 
-          <a href="/">
+          <Link to='/'>
             <img src={logo} alt="logo" />
-          </a>
+          </Link>
           <label className="store-header__address">
             <input type="text" className='input store-header__input-address' placeholder='Адрес доставки' />
           </label>
           <div className="store-header__buttons">
             <span className="store-header__user-name">Login</span>
-            <button className="button button-primary button-auth">
+            <button className="button button-primary button-auth" onClick={toogleLoginModalOpen}>
               <span className="button-auth-svg"></span>
               <span className="button-text">Войти</span>
             </button>
@@ -34,6 +44,8 @@ const Header = () => {
           </div>
         </div>
       </div>
+
+      {isLoginModal && <ModalAuth onClose={toogleLoginModalOpen} />}
     </header>
   )
 }

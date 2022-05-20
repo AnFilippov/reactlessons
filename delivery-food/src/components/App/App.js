@@ -1,5 +1,7 @@
 import Header from '../Header/Header';
 import HomePage from '../HomePage/HomePage';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import ProductList from '../ProductList/ProductList';
 import './App.scss';
 
 function App() {
@@ -7,8 +9,13 @@ function App() {
     <div className="App">
       <main className='main'>
         <div className='container'>
-          <Header />
-          <HomePage />
+          <Router>
+            <Header />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/restaurant/:products" element={<ProductList />} />
+            </Routes>
+          </Router>
         </div>
       </main>
 
