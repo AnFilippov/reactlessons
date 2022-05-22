@@ -38,7 +38,6 @@ button {
 
 	&__input-address {
 		width: 100%;
-		// background-image: url(../img/icon/home.svg);
 
     background-image: url(../../assets/img/icon/home.svg);
 	}
@@ -235,8 +234,9 @@ button {
 	&__spinner {
 		display: flex;
 		justify-content: center;
+        align-items: center;
 		width: 100%;
-		margin: 20px 0 30px;
+        height: calc(100vh - 126px);
 		grid-column-start: 2;
 	}
 
